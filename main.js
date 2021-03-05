@@ -30,6 +30,7 @@ function initializeClickEvents() {
 }
 
 function changeBotsValue(value) {
+    if (totalNoOfMoves > 0) return; // play is already in progress
     if (!playWithBot) return;
     botsValue = value;
     botIsX = botsValue == 'X';
@@ -53,6 +54,7 @@ function fillPosition(i, j) {
 }
 
 function playerCheck() {
+    if(matchComplete) return;
     let currPlayerIdName = xoToggle ? 'x-stat' : 'o-stat';
     let oppPlayerIdName = xoToggle ? 'o-stat' : 'x-stat';
 
