@@ -46,6 +46,10 @@ function botCheckCenter() {
         fillPosition(1, 1);
         return true;
     }
+    else if (totalNoOfMoves == 1) {
+        fillPosition(0, 0);
+        return true;
+    }
     return false;
 }
 
